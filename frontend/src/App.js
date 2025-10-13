@@ -7,7 +7,7 @@ function App() {
   const [formData, setFormData] = useState({
     job_name: '',
     amount: '',
-    federal_tax: '',
+    federal_amount: '',
     date: '',
     income_type: 'W2'
   });
@@ -52,7 +52,7 @@ function App() {
       });
       
       if (response.ok) {
-        setFormData({ job_name: '', amount: '', federal_tax: '', date: '', income_type: 'W2' });
+        setFormData({ job_name: '', amount: '', federal_amount: '', date: '', income_type: 'W2' });
         fetchIncomes();
         fetchTaxSummary();
       }
@@ -104,9 +104,9 @@ function App() {
             />
              <input
               type="text"
-              name="federal_tax"
+              name="federal_amount"
               placeholder="Federal Tax Withheld"
-              value={formData.federal_tax}
+              value={formData.federal_amount}
               onChange={handleChange}
               required
             />
@@ -161,7 +161,7 @@ function App() {
                   <strong>{income.job_name}</strong>
                   <span className="income-type">{income.income_type}</span>
                   <span>${income.amount.toFixed(2)}</span>
-                  <span>${income.federal_tax}</span>
+                  <span>${income.federal_amount}</span>
                   <span>{income.date}</span>
                 </div>
                 <button
