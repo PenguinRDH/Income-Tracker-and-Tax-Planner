@@ -61,7 +61,7 @@ income-tracker-and-tax-planner/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone Income-Tracker-and-Tax-Planner
 cd income-tracker-and-tax-planner
 ```
 
