@@ -205,19 +205,7 @@ You can also use GUI tools like pgAdmin or DBeaver with these credentials.
 
 ## Tax Calculation Details
 
-The application uses 2024 federal tax brackets for single filers:
-
-| Taxable Income | Tax Rate |
-|---------------|----------|
-| $0 - $11,600 | 10% |
-| $11,600 - $47,150 | 12% |
-| $47,150 - $100,525 | 22% |
-| $100,525 - $191,950 | 24% |
-| $191,950 - $243,725 | 32% |
-| $243,725 - $609,350 | 35% |
-| $609,350+ | 37% |
-
-**Standard Deduction**: $14,600
+The application uses 2026 federal tax brackets for single filers:
 
 ## Future Enhancements
 
@@ -248,12 +236,3 @@ If you see CORS errors in the browser console:
 - Make sure the backend container is running
 - Check that `flask-cors` is installed (it should be in requirements.txt)
 - Rebuild the backend: `docker-compose up --build backend`
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- Tax brackets based on 2024 IRS single filer brackets
-- Built as a learning project for full-stack development with Docker
